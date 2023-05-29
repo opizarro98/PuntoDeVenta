@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28-may-2023 20:09:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="datos.Empresa" table="empresa" catalog="pos" optimistic-lock="version">
+        <id name="empid" type="int">
+            <column name="empid" />
+            <generator class="assigned" />
+        </id>
+        <property name="empcedularuc" type="string">
+            <column name="empcedularuc" length="45" not-null="true" />
+        </property>
+        <property name="empnombre" type="string">
+            <column name="empnombre" length="25" not-null="true" />
+        </property>
+        <property name="emptelefono" type="string">
+            <column name="emptelefono" length="10" not-null="true" />
+        </property>
+        <property name="empdireccion" type="string">
+            <column name="empdireccion" length="45" not-null="true" />
+        </property>
+        <property name="empmail" type="string">
+            <column name="empmail" length="45" not-null="true" />
+        </property>
+        <property name="emplogo" type="string">
+            <column name="emplogo" length="45" />
+        </property>
+        <property name="facebook" type="string">
+            <column name="facebook" length="45" />
+        </property>
+        <property name="twitter" type="string">
+            <column name="twitter" length="45" />
+        </property>
+        <property name="instagram" type="string">
+            <column name="instagram" length="45" />
+        </property>
+        <property name="tiktok" type="string">
+            <column name="tiktok" length="45" />
+        </property>
+        <property name="fechacrea" type="timestamp">
+            <column name="fechacrea" length="19" not-null="true" />
+        </property>
+        <property name="fechamodi" type="timestamp">
+            <column name="fechamodi" length="19" not-null="true" />
+        </property>
+        <property name="usuariocrea" type="string">
+            <column name="usuariocrea" length="45" not-null="true" />
+        </property>
+        <property name="usuariomodi" type="string">
+            <column name="usuariomodi" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:p="http://primefaces.org/ui" 
+      xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:b="http://bootsfaces.net/ui" 
+      xmlns:my="http://java.sun.com/jsf/composite/recursos" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core" 
+      xmlns:ps="http://xmlns.jcp.org/jsf/passthrough">
+
+
+    <h:head>
+        <title>Empresa</title>
+        <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css"/>
+        <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../assets/libs/css/style.css"/>
+        <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css"/>
+        <link rel="stylesheet" href="../assets/vendor/charts/chartist-bundle/chartist.css"/>
+        <link rel="stylesheet" href="../assets/vendor/charts/morris-bundle/morris.css"/>
+        <link rel="stylesheet" href="../assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css"/>
+        <link rel="stylesheet" href="../assets/vendor/charts/c3charts/c3.css"/>
+        <link rel="stylesheet" href="../assets/vendor/fonts/flag-icon-css/flag-icon.min.css"/>
+
+        <!-- Optional JavaScript -->
+        <!-- jquery 3.3.1 -->
+        <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+        <!-- bootstap bundle js -->
+        <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+        <!-- slimscroll js -->
+        <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+        <!-- main js -->
+        <script src="../assets/libs/js/main-js.js"></script>
+        <!-- chart chartist js -->
+        <script src="../assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+        <!-- sparkline js -->
+        <script src="../assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+        <!-- morris js -->
+        <script src="../assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+        <script src="../assets/vendor/charts/morris-bundle/morris.js"></script>
+        <!-- chart c3 js -->
+        <script src="../assets/vendor/charts/c3charts/c3.min.js"></script>
+        <script src="../assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+        <script src="../assets/vendor/charts/c3charts/C3chartjs.js"></script>
+        <script src="../assets/libs/js/dashboard-ecommerce.js"></script>
+        <script src="https://kit.fontawesome.com/dcd9b8e580.js" crossorigin="anonymous"></script>
+    </h:head>
+    <!-- ============================================================== -->
+    <!-- CABECERA  -->
+    <!-- ============================================================== -->
+    <my:header id="header"/>    
+    <h:body>
+
+        <!-- ============================================================== -->
+        <!-- MENU LATERAL  -->
+        <!-- ============================================================== -->
+        <my:sidebar id="sidebar"/>
+
+
+        <div class="dashboard-wrapper">
+            <div class="influence-profile">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- TITULO BODY  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">PAGINA PRINCIPAL</h2>
+                                <p class="pageheader-text">.....</p>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Pagina principal</a></li>
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Empresa</a></li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- content -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <!-- ============================================================== -->
+                        <!-- profile -->
+                        <!-- ============================================================== -->
+                        <div class="col-xl-3 col-lg-3 col-md-5 col-sm-12 col-12">
+                            <!-- ============================================================== -->
+                            <!-- card profile -->
+                            <!-- ============================================================== -->
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="user-avatar text-center d-block">
+                                        <img src="../assets/images/avatar-1.jpg" alt="User Avatar" class="rounded-circle user-avatar-xxl"/>
+                                    </div>
+                                    <div class="text-center">
+                                        <h2 class="font-24 mb-0">#{empresaBean.empresa.empnombre}</h2>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h3 class="font-16">Informacion de Contacto</h3>
+                                    <div class="">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-0"><i class="fas fa-location-arrow"></i>#{empresaBean.empresa.empdireccion}</li>
+                                            <li class="mb-0"><i class="fas fa-fw fa-phone mr-2"></i>#{empresaBean.empresa.emptelefono}</li>
+                                            <li class="mb-2"><i class="fas fa-fw fa-envelope mr-2"></i>#{empresaBean.empresa.empmail}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h3 class="font-16">Calificacion</h3>
+                                    <h1 class="mb-0">4.8</h1>
+                                    <div class="rating-star">
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                        <i class="fa fa-fw fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h3 class="font-16">Redes Sociales</h3>
+                                    <div class="">
+                                        <ul class="mb-0 list-unstyled">
+                                            <li class="mb-1"><a href="#"><i class="fab fa-fw fa-facebook-square mr-1 facebook-color"></i>#{empresaBean.empresa.facebook}</a></li>
+                                            <li class="mb-1"><a href="#"><i class="fab fa-fw fa-instagram mr-1 instagram-color"></i>#{empresaBean.empresa.instagram}</a></li>
+                                            <li class="mb-1"><a href="#"><i class="fa-brands fa-tiktok mr-1 tiktok-color"></i> #{empresaBean.empresa.tiktok}</a></li>
+                                            <li class="mb-1"><a href="#"><i class="fab fa-fw fa-twitter-square mr-1 twitter-color"></i>#{empresaBean.empresa.twitter}</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body border-top">
+                                    <h3 class="font-16">Category</h3>
+                                    <div>
+                                        <a href="#" class="badge badge-light mr-1">Fitness</a><a href="#" class="badge badge-light mr-1">Life Style</a><a href="#" class="badge badge-light mr-1">Gym</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end card profile -->
+                            <!-- ============================================================== -->
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end profile -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- DATOS DE LA EMPRESA -->
+                        <!-- ============================================================== -->
+                        <div class="col-xl-9 col-lg-9 col-md-7 col-sm-12 col-12">
+                            <!-- ============================================================== -->
+                            <!-- campaign tab one -->
+                            <!-- ============================================================== -->
+                            <div class="influence-profile-content pills-regular">
+                                <ul class="nav nav-pills mb-3 nav-justified" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-campaign-tab" data-toggle="pill" href="#pills-campaign" role="tab" aria-controls="pills-campaign" aria-selected="true">IDENTIDAD </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <div class="section-block">
+                                                <h3 class="section-title">MI EMPRESA</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h1 class="mb-1">9</h1>
+                                                    <p>DATOS DE LA EMRPESA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h1 class="mb-1">35</h1>
+                                                    <p>Finished Campaigns</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h1 class="mb-1">8</h1>
+                                                    <p>Accepted Campaigns</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h1 class="mb-1">1</h1>
+                                                    <p>Declined Campaigns</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section-block">
+                                        <h3 class="section-title">DATOS DE LA EMPRESA</h3>
+                                    </div>
+
+                                    <b:form>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <div class="media influencer-profile-data d-flex align-items-center p-2">
+                                                            <div class="mr-4">
+                                                                <img src="../assets/images/slack.png" alt="User Avatar" class="user-avatar-lg"/>
+                                                            </div>
+                                                            <div class="media-body ">
+                                                                <div class="influencer-profile-data">
+                                                                    <h3 class="m-b-10">Ingresa los datos detu empresa</h3>
+                                                                    <p>
+                                                                        <span class="m-r-20 d-inline-block">Fecha de creacion
+                                                                            <span class="m-l-10 text-primary">24 Jan 2018</span>
+                                                                        </span>
+                                                                        <span class="m-r-20 d-inline-block">Fecha de modificacion
+                                                                            <span class="m-l-10 text-secondary">30 Feb 2018</span>
+                                                                        </span>
+                                                                        <span class="m-r-20 d-inline-block">Editado por <span class="m-l-10  text-info">Oscar</span>
+                                                                        </span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top card-footer p-0">
+                                                <div class="card-body">
+
+                                                    <div class="form-group">
+                                                        <label for="nomEmpresa" class="col-form-label">Nombre</label>
+                                                        <b:inputText id="nomEmpresa" value="#{empresaBean.empresa.empnombre}" required="true" required-message="Ingrese un nombre valido" type="text" class="form-control" placeholder="Nombre de la empresa" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="rucEmpresa" class="col-form-label">Ruc</label>
+                                                        <b:inputText id="rucEmpresa" value="#{empresaBean.empresa.empcedularuc}" type="text" class="form-control" placeholder="RUC" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="telEmpresa" class="col-form-label">Telefono</label>
+                                                        <b:inputText id="telEmpresa"  value="#{empresaBean.empresa.emptelefono}" type="text" class="form-control" placeholder="Telefono" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="dirEmpresa" class="col-form-label">Direccion</label>
+                                                        <b:inputText id="dirEmpresa" value="#{empresaBean.empresa.empdireccion}" type="text" class="form-control" placeholder="Direccion" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="emailEmpresa">Email</label>
+                                                        <b:inputText id="emailEmpresa" value="#{empresaBean.empresa.empmail}" type="email" placeholder="nombre@example.com" class="form-control"/>
+                                                        <p>Necesita un correo electrinico.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                        <div class="media influencer-profile-data d-flex align-items-center p-2">
+                                                            <div class="media-body ">
+                                                                <div class="influencer-profile-data">
+                                                                    <h3 class="m-b-10">Redes Sociales</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top card-footer p-0">
+                                                <div class="card-body">
+
+                                                    <div class="form-group">
+                                                        <label for="fbEmpresa" class="col-form-label">Facebook</label>
+                                                        <b:inputText id="fbEmpresa" value="#{empresaBean.empresa.facebook}" type="text" class="form-control" placeholder="URL Facebook" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="twEmpresa" class="col-form-label">Twitter</label>
+                                                        <b:inputText id="twEmpresa" value="#{empresaBean.empresa.twitter}" type="text" class="form-control" placeholder="URL Twitter" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="insEmpresa" class="col-form-label">Instagram</label>
+                                                        <b:inputText id="insEmpresa"  value="#{empresaBean.empresa.instagram}" type="text" class="form-control" placeholder="URL Instagram" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="tkEmpresa" class="col-form-label">TikTok</label>
+                                                        <b:inputText id="tkEmpresa" value="#{empresaBean.empresa.tiktok}" type="text" class="form-control" placeholder="URL TikTok" />
+                                                    </div>
+
+                                                    <b:commandButton type="submit" value="Guardar" action="#{empresaBean.guardarDatos()}" look="primary" icon-awesome="fas fa-save"/>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </b:form>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end campaign tab one -->
+                            <!-- ============================================================== -->
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end campaign data -->
+                        <!-- ============================================================== -->
+                    </div>
+                </div>
+            </div>
+            <my:footer id="footer"/>
+        </div>
+    </h:body>
+</html>
+
